@@ -3,7 +3,6 @@ numpy
 streamlit
 tensorflow
 keras
-os
 random
 PIL
 matplotlib
