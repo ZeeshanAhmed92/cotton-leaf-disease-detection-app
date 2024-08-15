@@ -3,7 +3,6 @@ numpy
 streamlit
 tensorflow
 keras
-PIL
 matplotlib
 seaborn
 Conv_2D
