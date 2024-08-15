@@ -1,0 +1,15 @@
+pandas
+numpy
+streamlit
+OpenCV
+tensorflow
+keras
+os
+random
+PIL
+matplotlib
+seaborn
+Con_2D
+BatchNormalization
+Maxpooling2D
+
