@@ -5,6 +5,6 @@ tensorflow
 keras
 matplotlib
 seaborn
-sklearn
+scikit-learn
 warnings
 
