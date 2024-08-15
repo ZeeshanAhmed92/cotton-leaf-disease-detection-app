@@ -6,5 +6,3 @@ keras
 matplotlib
 seaborn
 scikit-learn
-warnings
-
