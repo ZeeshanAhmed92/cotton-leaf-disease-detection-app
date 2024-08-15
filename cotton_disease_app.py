@@ -34,8 +34,6 @@ header_html = """
 # Render the HTML in Streamlit
 st.markdown(header_html, unsafe_allow_html=True)
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
-
 # Loading model
 model = load_model('cotton_disease_detection.h5')
 
