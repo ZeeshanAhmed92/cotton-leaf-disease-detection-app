@@ -1,7 +1,6 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-import cv2
 import os
 import random
 from PIL import Image, UnidentifiedImageError
