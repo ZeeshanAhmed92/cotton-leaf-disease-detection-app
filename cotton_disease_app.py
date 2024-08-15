@@ -24,36 +24,36 @@ st.markdown(header_html, unsafe_allow_html=True)
 # Loading model
 model = load_model('cotton_disease_detection.h5')
 
-# # Function for fetching sample images from each class
-# def get_sample_images(main_dir, num_samples=3):
-#     subdirs = [d for d in os.listdir(main_dir) if os.path.isdir(os.path.join(main_dir, d))]
-#     sample_images = {}
-#     for subdir in subdirs:
-#         subdir_path = os.path.join(main_dir, subdir)
-#         images = [f for f in os.listdir(subdir_path) if os.path.isfile(os.path.join(subdir_path, f))]
-#         sampled_images = random.sample(images, num_samples)
-#         sample_images[subdir] = [os.path.join(subdir_path, img) for img in sampled_images]
-#     return sample_images
+# Function for fetching sample images from each class
+def get_sample_images(main_dir, num_samples=3):
+    subdirs = [d for d in os.listdir(main_dir) if os.path.isdir(os.path.join(main_dir, d))]
+    sample_images = {}
+    for subdir in subdirs:
+        subdir_path = os.path.join(main_dir, subdir)
+        images = [f for f in os.listdir(subdir_path) if os.path.isfile(os.path.join(subdir_path, f))]
+        sampled_images = random.sample(images, num_samples)
+        sample_images[subdir] = [os.path.join(subdir_path, img) for img in sampled_images]
+    return sample_images
 
-# # Function for displaying sample images from each class
-# def main():
+# Function for displaying sample images from each class
+def main():
     
-#     main_directory = "Cotton Disease/train"  # Replace with the path to your main directory
-#     sample_images = get_sample_images(main_directory)
+    main_directory = "Cotton Disease/train"  # Replace with the path to your main directory
+    sample_images = get_sample_images(main_directory)
 
-#     for folder, images in sample_images.items():
-#         header_html1 = f"""
-#         <h3 style="color: lightgreen;">{folder} Samples</h3>
-#                                                         """
-#         # Render the HTML in Streamlit
-#         st.markdown(header_html1, unsafe_allow_html=True)
-#         cols = st.columns(3)
-#         for idx, img_path in enumerate(images):
-#             image = Image.open(img_path)
-#             cols[idx].image(image, use_column_width=True)
+    for folder, images in sample_images.items():
+        header_html1 = f"""
+        <h3 style="color: lightgreen;">{folder} Samples</h3>
+                                                        """
+        # Render the HTML in Streamlit
+        st.markdown(header_html1, unsafe_allow_html=True)
+        cols = st.columns(3)
+        for idx, img_path in enumerate(images):
+            image = Image.open(img_path)
+            cols[idx].image(image, use_column_width=True)
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
       
 # Function for preprocessing uploaded image           
 def image_preprocessing(image):
