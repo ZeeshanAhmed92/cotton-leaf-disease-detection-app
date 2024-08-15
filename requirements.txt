@@ -12,4 +12,6 @@ seaborn
 Con_2D
 BatchNormalization
 Maxpooling2D
+sklearn
+warnings
 
