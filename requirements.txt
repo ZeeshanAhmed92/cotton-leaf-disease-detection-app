@@ -1,7 +1,6 @@
 pandas
 numpy
 streamlit
-cv2
 tensorflow
 keras
 os
@@ -9,7 +8,7 @@ random
 PIL
 matplotlib
 seaborn
-Con_2D
+Conv_2D
 BatchNormalization
 Maxpooling2D
 sklearn
